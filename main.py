@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 """
 Keyboard Checker - Listens for keyboard presses and outputs them to terminal
+
+This script uses pynput which provides cross-platform keyboard monitoring.
+On Windows, pynput uses Windows API (SetWindowsHookEx) for low-level keyboard hooks.
+On Linux, it uses X11 or evdev.
+
+For more direct Windows API access, see:
+- windows_api_version.py (direct ctypes Windows API calls)
+- keyboard_lib_version.py (keyboard library alternative)
 """
 
 from pynput import keyboard
