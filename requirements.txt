@@ -1,0 +1,11 @@
+# Core dependencies
+pynput>=1.7.6
+
+# For Windows API version (wversion.py)
+# No additional packages needed - uses built-in ctypes
+
+# For keyboard library version (keyboard_lib_version.py)
+keyboard>=0.13.5
+
+# Development dependencies (optional)
+pywin32>=306; sys_platform == "win32"

@@ -32,6 +32,18 @@ A collection of Python scripts demonstrating different approaches to keyboard ev
 
 ## Installation
 
+### Quick Setup (Windows)
+
+For Windows users, run the automated setup:
+
+```cmd
+setup_windows.bat
+```
+
+**Note: Run as Administrator for best results**
+
+### Manual Installation (All Platforms)
+
 ```bash
 # Create virtual environment
 python -m venv .venv
@@ -42,10 +54,21 @@ python -m venv .venv
 # On Linux/macOS:
 source .venv/bin/activate
 
-# Install dependencies
+# Install all dependencies at once
+pip install -r requirements.txt
+
+# Or install individually:
 pip install pynput
 pip install keyboard  # For keyboard_lib_version.py
+pip install pywin32   # For enhanced Windows support (optional)
 ```
+
+### Windows-Specific Requirements
+
+- **Python 3.7+** installed and in PATH
+- **Administrator privileges** recommended for low-level hooks
+- **Windows 10/11** (Windows 7+ should work but not tested)
+- The `wversion.py` (Windows API version) uses only built-in libraries (`ctypes`)
 
 ## Usage
 
